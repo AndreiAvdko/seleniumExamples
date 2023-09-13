@@ -1,0 +1,42 @@
+######################################
+### Examples of different locators ###
+######################################
+
+By.id("lst-ib");
+By.name("q");
+By.className("gsfi");
+By.tagName("input");
+By.cssSelector("input#lst-ib");
+By.xpath("//input[@aria-label = 'Search']");
+By.linkText("Gmail");
+By.linkPartialText("mail");
+
+#############################
+### Examples for Selenium ###
+#############################
+
+File file = new File("src/test/resources/chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+WebDriver driver = new ChromeDriver();
+driver.navigate().to("https://www.google.com/");
+WebElement searchField = driver.findElement(By.name("q"));
+
+### Manipulating the elements ###
+webElementObject.   click()
+webElementObject.   sendKeys("some string") || sendKeys(Keys.RETURN)
+webElementObject.   getText()
+webElementObject.   getAttribute("value")
+
+##########################################
+### @FindBy annotations in Page Object ###
+##########################################
+
+    Instead of
+WebElement clearButton = driver.findElement(By.id("clear"));
+    there is
+@FindBy(id = "clear")
+WebElement clearButton;
+
+
+button.isEnabled()
+

@@ -1,0 +1,5 @@
+### Asserts Examples ###
+Assert.assertTrue(condition, message)
+Assert.assertEquals(actualResult, expectedResult, message);
+
+
